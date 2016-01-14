@@ -3,11 +3,17 @@ module.exports = {
     sass : {
         css: {
             options: {
-                sassDir    : '<%= srcPath %>scss',
-                cssDir     : '<%= destPath %>css',
-                outputStyle: 'expanded',
-                noLineComments : true
-            }
+                sourcemap: 'none',
+                style: 'expanded',
+                noLineComment:false
+            },
+            files: [{
+                expand: true,
+                cwd: 'scss',
+                src: ['*.scss', '**/*.scss'],
+                dest: '../public/css',
+                ext: '.css',
+            }]
         },
     },
     //compass:    require('./compass'),

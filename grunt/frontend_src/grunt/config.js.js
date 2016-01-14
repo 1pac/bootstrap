@@ -13,7 +13,7 @@ module.exports = {
         //create module.js
         js_lib_module : {
             files : {
-                '<%= srcPath %>js/lib/modules.js': ['<%= srcPath %>js/lib/module/*.js'],
+                '<%= srcPath %>js/lib/module.js': ['<%= srcPath %>js/lib/module/*.js'],
             }
         },
     },
@@ -26,7 +26,7 @@ module.exports = {
         //copy module.js to public
         js_lib_module : {
             files: {
-                '<%= destPath %>js/lib/modules.js': ['<%= srcPath %>js/lib/module.js']
+                '<%= destPath %>js/lib/module.js': ['<%= srcPath %>js/lib/module.js']
             }
         },
         //copy other js-file to public
@@ -48,7 +48,7 @@ module.exports = {
         },
     },
     clean:      {
-        js_lib_vendor  : ['<%= srcPath %>js/lib/vendor.js'],
-        js_lib_modules : ['<%= srcPath %>js/lib/module.js'],
+        js_lib_vendor : ['<%= srcPath %>js/lib/vendor.js'],
+        js_lib_module : ['<%= srcPath %>js/lib/module.js'],
     },
 };

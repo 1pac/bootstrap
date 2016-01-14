@@ -24,7 +24,7 @@
      Setup tasks
      */
 
-    grunt.registerTask('css', ['sass', 'copy',]);
+    grunt.registerTask('css', ['sass',]);
     grunt.registerTask('js',  ['qunit', 'concat', 'uglify', 'copy', 'clean',]);
 
     grunt.registerTask('build',['css', 'js']);
