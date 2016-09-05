@@ -16,5 +16,15 @@ module.exports = {
             }]
         },
     },
-    //compass:    require('./compass'),
+    copy: {
+        //copy vendor.js to public
+        js: {
+            files: [{
+                expand: true,
+                cwd: '<%= destPath %>/css',
+                src: ['**/*.css'],
+                dest: '<%= exportPath %>/css'
+            }]
+        }
+    }
 };
