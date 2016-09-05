@@ -3,8 +3,10 @@
 
   module.exports = function(grunt) {
     var config = _.merge({
-      srcPath: "./",
-      destPath: "../public/"
+      srcPath:  './src',
+      specPath: './spec',
+      destPath: './public',
+      exportPath: '../public'
     }, require('./grunt/config.js'));
 
     grunt.initConfig(config);
@@ -24,12 +26,13 @@
      Setup tasks
      */
 
-    grunt.registerTask('css', ['sass',]);
-    grunt.registerTask('js',  ['qunit', 'concat', 'uglify', 'copy', 'clean',]);
+    grunt.registerTask('test', ['qunit']);
+    grunt.registerTask('css',  ['sass']);
+    grunt.registerTask('js',  [ 'qunit', 'concat', 'uglify', 'copy']);
 
     grunt.registerTask('build',['css', 'js']);
 
-    grunt.registerTask('default', ['build',]);
+    grunt.registerTask('default', ['build']);
 
     /*
      Shortcut tasks
@@ -37,6 +40,7 @@
     grunt.registerTask('w', ['watch']);
     grunt.registerTask('c', ['css']);
     grunt.registerTask('j', ['js']);
+    grunt.registerTask('t', ['test']);
 
     grunt.registerTask('b', ['build']);
   };

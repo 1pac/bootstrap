@@ -9,12 +9,22 @@ module.exports = {
             },
             files: [{
                 expand: true,
-                cwd: 'scss',
+                cwd: '<%= srcPath %>/css',
                 src: ['*.scss', '**/*.scss'],
-                dest: '../public/css',
+                dest: '<%= destPath %>/css',
                 ext: '.css',
             }]
         },
     },
-    //compass:    require('./compass'),
+    copy: {
+        //copy vendor.js to public
+        js: {
+            files: [{
+                expand: true,
+                cwd: '<%= destPath %>/css',
+                src: ['**/*.css'],
+                dest: '<%= exportPath %>/css'
+            }]
+        }
+    }
 };
