@@ -2,8 +2,8 @@ module.exports = {
     watch : {
         js : {
             files: [
-                '<%= srcPath %>js/**/*.js',
-                '<%= srcPath %>js/*.js'
+                '<%= srcPath %>/js/**/*.js',
+                '<%= srcPath %>/js/*.js'
             ],
             tasks: ['js_debug']
         },
@@ -12,7 +12,7 @@ module.exports = {
                 livereload: true,
             },
             files: [
-                '<%= srcPath %>scss/**/*.scss'
+                '<%= srcPath %>/css/**/*.scss'
             ],
             tasks: ['css']
         },

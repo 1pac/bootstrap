@@ -3,8 +3,9 @@
 
   module.exports = function(grunt) {
     var config = _.merge({
-      srcPath: "./",
-      destPath: "../public/"
+      srcPath:  './src',
+      specPath: './spec',
+      destPath: './public'
     }, require('./grunt/config.js'));
 
     grunt.initConfig(config);
